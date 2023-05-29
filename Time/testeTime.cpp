@@ -29,4 +29,6 @@ int main()
     cout << "\nModificado Standard Time";
     t.printStandard();
     cout<<endl; 
+
+    return 0;
 }
