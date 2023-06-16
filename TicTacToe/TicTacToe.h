@@ -9,6 +9,8 @@ public:
     void jogador1(int);
     void jogador2(int); 
     void marcarJogada(int, int, char marcador);
+    bool fimDeJogo();
+    void printTabuleiro();
 
 private:
 
@@ -16,6 +18,7 @@ private:
     int jogadas;
     bool checarLinha();
     bool checarColuna();
+    bool checarVelha();
     void iniciarArray();
     bool validarJogada(int);
 };
