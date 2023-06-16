@@ -8,7 +8,7 @@ public:
     TicTacToe();
     void jogador1(int);
     void jogador2(int); 
-
+    void marcarJogada(int, int, char marcador);
 
 private:
 
@@ -17,6 +17,7 @@ private:
     bool checarLinha();
     bool checarColuna();
     void iniciarArray();
+    bool validarJogada(int);
 };
 
 #endif
