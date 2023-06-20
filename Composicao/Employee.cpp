@@ -6,11 +6,16 @@
 using namespace std;
 
 
+/*
+Prefira listas de inicializadores de membro em vez de atribuir valores no corpo do 
+construtor. Uma lista de inicializadores de membro inicializa diretamente os membros.
+Membros const e membros do tipo de referência devem ser inicializados na lista de 
+inicializadores de membro.
+ */
+
 Employee::Employee(const char * const first, const char * const last, const Data &dataOfBirth, 
 const Data &dataOfHire)
 : birthData( dataOfBirth ), hireData( dataOfHire )
-// construtor usa lista de inicializadores de membro para passar valores de inicializadores
-// para construtores dos objetos-membro birthDate e hireDate PESQUISAR !!!!!!!!!!
 {
     int length = strlen(first);
     length = (length < 25 ? length : 24);
