@@ -10,11 +10,14 @@ class Conta:
     def depositar(self, valor: float) -> None:
         self.saldo += valor
 
-    def sacar(self, valor: float) -> bool:
-        if self.validar_valor_de_saque(valor):
-            print("Valor inválido")
+    def sacar(self, valor: float) -> None:
+        test = self.validar_valor_de_saque(valor)
+        if not(self.validar_valor_de_saque(valor)):
+            print(f"Valor inválido!")
+            return False
         else:
             self.saldo -= valor
+            return True
     
     def validar_valor_de_saque(self, valor) -> bool:
         if valor > self.saldo:
@@ -22,5 +25,13 @@ class Conta:
         else: 
             return True
 
-    def extrato(self):
+    def extrato(self) -> None:
         print(f"número {self.numero}\nsaldo: {self.saldo}")
+
+    def transferir(self, destino: any, valor: float) -> bool:
+        retirou = self.sacar(valor)
+        if(retirou == False):
+            return False
+        else:
+            destino.depositar(valor)
+            return True
