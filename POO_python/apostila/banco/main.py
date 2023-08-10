@@ -1,18 +1,18 @@
 from conta import Conta
+from cliente import Cliente
 
 # Quando instanciamos um objeto e atrbuimos ele a uma variável estamos passando o 
 # endereço desse obj na memória 
 
-conta_1 = Conta('123-4', 'João', 120.0, 1000.0)
-conta_2 = Conta('123-5', 'Maria', 1200.0, 1000.0)
- 
-"""conta_1.depositar(20.0)
-conta_1.extrato()
+cliente1 = Cliente('João', 'Oliveira', '11111111111-11')
+cliente2 = Cliente('José', 'Azevedo', '222222222-22')
+conta1 = Conta('123-4', cliente1, 1000.0)
+conta2 = Conta('123-5', cliente2, 1000.0)
+conta1.depositar(100.0)
+conta1.sacar(50.0)
+conta1.transferir(conta2, 200.0)
+conta1.extrato()
 
-conta_2.sacar(15)
-conta_2.extrato()
-"""
-conta_1.transferir(conta_2, 5.0)
+conta1.historico.imprimir()
 
-conta_1.extrato()
-conta_2.extrato()
+conta2.historico.imprimir()
