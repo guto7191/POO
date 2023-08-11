@@ -11,4 +11,6 @@ class Historico:
         
         for i in self.transacoes:
             print(f"- {i}")
+    
+
 

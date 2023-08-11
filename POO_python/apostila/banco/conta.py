@@ -10,6 +10,7 @@ class Conta:
         self.saldo = saldo
         self.historico = Historico()
         self.limite = limite
+        self.data
         
     
     def depositar(self, valor: float) -> None:
