@@ -5,19 +5,20 @@ class Jogador:
         self.nome = nome
 
     def marcar_posicao(self):
-        var = int(input(f"Escolha a sua posição {self.get_nome()}: "))
+        var = input(f"Escolha a sua posição {self.get_nome()}: ")
         self.validar_posicao(var)
+        #self.passar_posicao_para_tabuleiro
     
 
     def repitir_marcar_posicao(self):
-        var = int(input(f"Valor inválido escolha a sua posição {self.get_nome()}: "))
-        while var <= 0 and var < 9:
+        var = input(f"Valor inválido escolha a sua posição {self.get_nome()}: ")
+        while var != 'x' and var != 'o':
             var = int(input(f"Valor inválido escolha a sua posição {self.get_nome()}: "))
 
 
-    def validar_posicao(self, valor: int):
+    def validar_posicao(self, valor: str):
         # melhorar isso depois
-        if valor <= 0 and valor < 9:
+        if valor != 'x' and valor != 'o':
             print("Valor Inválido!")
             self.repitir_marcar_posicao()
 
