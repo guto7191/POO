@@ -4,7 +4,11 @@ class Tabuleiro:
         self.matrix = [[" "," "," "],[" "," "," "],[" ", " ", " "]]
     
     def passar_posicao_para_tabuleiro(self, valor: str) -> None:
-        pass 
+        # Aqui dever ser passado a posição do jogador escolhida no tabuleiro
+        pass
+
+    # verifica se a posição escolhida e válida
+    def validar_posicao_valida(self):    
 
     def print_tabuleiro(self):
         print("Tabuleiro!\n ")
