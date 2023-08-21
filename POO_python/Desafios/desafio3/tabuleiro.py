@@ -5,11 +5,11 @@ class Tabuleiro:
     
     def passar_posicao_para_tabuleiro(self, valor: str) -> None:
         # Aqui dever ser passado a posição do jogador escolhida no tabuleiro
-        pass
+        # Tem que verificar se o valor está preenchido ou não
 
     # verifica se a posição escolhida e válida
     def validar_posicao_valida(self):    
-
+        
     def print_tabuleiro(self):
         print("Tabuleiro!\n ")
         print(f"{self.matrix[0][0]} | {self.matrix[0][1]} | {self.matrix[0][2]}\n" + "_" * 10 + "\n" + 
