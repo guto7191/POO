@@ -7,6 +7,7 @@ class Tabuleiro:
         # Aqui dever ser passado a posição do jogador escolhida no tabuleiro
         # Tem que verificar se o valor está preenchido ou não
 
+
     # verifica se a posição escolhida e válida
     def validar_posicao_valida(self):    
         
